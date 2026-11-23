@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abundia Estética Integral | Valoración personalizada con Helen Alfaro</title>
+<meta name="description" content="Estética integral facial y corporal, antienvejecimiento, hidroterapia de colon y bienestar. Agenda tu valoración por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== PALETA Y TIPOGRAFÍA ===== */
+:root{
+  --crema:#F7F1E7; --marfil:#FBF8F2; --blanco:#FFFFFF;
+  --carbon:#3B322C; --suave:#6F6259;
+  --salvia:#8A9A7B; --salvia-osc:#6B7C5D;
+  --champan:#B8935A; --champan-osc:#9C7840;
+  --rosa:#EBDDD9; --lavanda:#E6E0EC;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  --sombra:0 10px 30px rgba(90,70,50,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--crema);color:var(--carbon);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(--carbon)}
+h1{font-size:clamp(2.3rem,6vw,3.9rem)} h2{font-size:clamp(1.9rem,4.4vw,2.9rem)} h3{font-size:1.5rem}
+p{color:var(--suave)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.centro{text-align:center}
+.centro p.sub{max-width:640px;margin:14px auto 0}
+a:focus-visible,button:focus-visible{outline:3px solid var(--champan);outline-offset:3px}
+
+/* ===== BOTONES CTA ===== */
+.btn{display:inline-block;background:var(--salvia-osc);color:#fff;text-decoration:none;font-weight:600;padding:15px 30px;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s;box-shadow:0 8px 20px rgba(107,124,93,.28)}
+.btn:hover{transform:translateY(-3px);background:var(--champan-osc);box-shadow:0 12px 26px rgba(156,120,64,.32)}
+.btn.sm{padding:11px 22px;font-size:.92rem}
+.btn.borde{background:transparent;color:var(--salvia-osc);border:1.5px solid var(--salvia-osc);box-shadow:none}
+.btn.borde:hover{background:var(--salvia-osc);color:#fff}
+
+/* ===== HEADER ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(251,248,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,147,90,.25)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--carbon);text-decoration:none}
+.logo small{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--champan-osc);letter-spacing:.04em;margin-top:-4px}
+
+/* ===== HERO + BANNER IMGBB ===== */
+.hero{background:linear-gradient(160deg,var(--marfil),var(--rosa) 130%);padding:56px 0 84px}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr}}
+.hero p.lead{font-size:1.12rem;margin:20px 0 30px;max-width:520px}
+.banner{border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:var(--sombra);background:var(--lavanda);aspect-ratio:4/5;max-height:560px;width:100%}
+.banner img{width:100%;height:100%;object-fit:cover}
+/* >>> BANNER: pega tu enlace directo de ImgBB en el atributo src del <img id="banner-img"> <<< */
+
+/* ===== AIDA ===== */
+.aida{display:grid;gap:26px;margin-top:48px}
+@media(min-width:800px){.aida{grid-template-columns:1fr 1fr}}
+.paso{background:var(--blanco);border-radius:22px;padding:34px;box-shadow:var(--sombra);border-top:4px solid var(--salvia)}
+.paso:nth-child(2){border-color:var(--champan)} .paso:nth-child(3){border-color:#C9A9B0} .paso:nth-child(4){border-color:#A99BBE}
+.paso .letra{font-family:var(--serif);font-size:3rem;color:var(--champan);line-height:1}
+.paso h3{margin:6px 0 10px}
+.paso p{margin-bottom:22px}
+.bloque-accion{background:var(--carbon);color:#fff}
+.bloque-accion h3,.bloque-accion p{color:#fff}
+
+/* ===== GALERÍA ===== */
+.bg-marfil{background:var(--marfil)}
+.grid-trat{display:grid;gap:26px;margin-top:48px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.trat{background:var(--blanco);border-radius:22px;overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .3s}
+.trat:hover{transform:translateY(-6px)}
+.trat .foto{aspect-ratio:4/3;background:linear-gradient(135deg,var(--lavanda),var(--rosa));overflow:hidden}
+.trat .foto img{width:100%;height:100%;object-fit:cover}
+.trat .cuerpo{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.etiqueta{align-self:flex-start;background:var(--crema);color:var(--champan-osc);font-size:.78rem;font-weight:600;padding:4px 12px;border-radius:999px}
+.trat p{font-size:.95rem;flex:1}
+
+/* ===== TESTIMONIOS ===== */
+.grid-test{display:grid;gap:22px;margin-top:48px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.test{background:var(--blanco);border-radius:20px;padding:28px;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:12px}
+.estrellas{color:var(--champan);letter-spacing:3px;font-size:1.05rem}
+.test blockquote{font-family:var(--serif);font-size:1.2rem;line-height:1.4;color:var(--carbon);flex:1}
+.test .quien{font-weight:600;font-size:.95rem}
+.test .quien span{display:block;font-weight:400;color:var(--suave);font-size:.84rem}
+.test a{color:var(--salvia-osc);font-size:.88rem;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start}
+
+/* ===== CIERRE ===== */
+.cierre{background:linear-gradient(160deg,var(--lavanda),var(--rosa))}
+.cierre-caja{background:var(--blanco);border-radius:28px;padding:clamp(28px,5vw,60px);box-shadow:var(--sombra);display:grid;gap:34px}
+@media(min-width:850px){.cierre-caja{grid-template-columns:1.2fr 1fr}}
+.confianza{list-style:none;margin:18px 0 26px;display:grid;gap:10px}
+.confianza li{padding-left:28px;position:relative;color:var(--suave)}
+.confianza li::before{content:"✓";position:absolute;left:0;color:var(--salvia-osc);font-weight:700}
+.datos{background:var(--crema);border-radius:20px;padding:26px;display:grid;gap:16px;align-content:start}
+.datos b{display:block;color:var(--champan-osc);font-size:.85rem}
+.datos a{color:var(--carbon);font-weight:600;text-decoration:none}
+footer{padding:30px 0;text-align:center;font-size:.85rem;color:var(--suave);background:var(--marfil)}
+
+/* ===== WHATSAPP FLOTANTE ===== */
+.flotante{position:fixed;right:18px;bottom:18px;z-index:60;background:#4E8A63;color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.2);transition:transform .25s;font-size:.92rem}
+.flotante:hover{transform:scale(1.06)}
+
+/* ===== ANIMACIONES AL SCROLL ===== */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rev.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Abundia Estética Integral<small>by Helen Alfaro</small></a>
+    <a class="btn sm" data-wa="Hola, vi su página y quiero información sobre Abundia." href="#">Escribir por WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ===== HERO CON BANNER IMGBB ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="rev">
+      <h1>Recupera tu luz, tu piel y tu bienestar, con un plan hecho para ti</h1>
+      <p class="lead">En Abundia Estética Integral, Helen Alfaro empieza con un diagnóstico personalizado y diseña tratamientos faciales y corporales que cuidan tu belleza sin improvisar.</p>
+      <a class="btn" data-wa="Hola Helen, quiero agendar mi diagnóstico personalizado en Abundia." href="#">Agendar mi diagnóstico</a>
+    </div>
+    <div class="banner rev">
+      <!-- PEGA AQUÍ TU ENLACE DIRECTO DE IMGBB (debe terminar en .jpg o .png) -->
+      <img id="banner-img" src="PEGA_AQUI_TU_ENLACE_DIRECTO_DE_IMGBB" alt="Abundia Estética Integral, banner principal">
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESO AIDA ===== -->
+<section>
+  <div class="wrap">
+    <div class="centro rev">
+      <h2>Tu camino hacia una versión más radiante</h2>
+      <p class="sub">Cuatro pasos claros, con acompañamiento cercano en cada uno.</p>
+    </div>
+    <div class="aida">
+      <!-- A: ATENCIÓN -->
+      <article class="paso rev">
+        <div class="letra">A</div><h3>Atención</h3>
+        <p>Tu piel y tu cuerpo hablan: cansancio, falta de luminosidad, tensión, pesadez. Restaurar tu vitalidad no requiere soluciones agresivas ni pruebas al azar, requiere que alguien te escuche y te evalúe bien.</p>
+        <a class="btn sm" data-wa="Hola Helen, quiero recuperar la vitalidad de mi piel y mi bienestar. ¿Me orientas?" href="#">Quiero recuperar mi vitalidad</a>
+      </article>
+      <!-- I: INTERÉS -->
+      <article class="paso rev">
+        <div class="letra">I</div><h3>Interés</h3>
+        <p>La filosofía de Abundia, creada por Helen Alfaro, parte de un diagnóstico adecuado y une cuidado facial y corporal, antienvejecimiento y bienestar integral. Cada protocolo se ajusta a tu piel, tu ritmo y tus metas.</p>
+        <a class="btn sm" data-wa="Hola Helen, me interesa conocer la filosofía y el método de Abundia." href="#">Conocer el método Abundia</a>
+      </article>
+      <!-- D: DESEO -->
+      <article class="paso rev">
+        <div class="letra">D</div><h3>Deseo</h3>
+        <p>Imagina una piel luminosa y firme, un contorno corporal más definido, ligereza interna y esa calma de sentirte cuidada de pies a cabeza. Eso es una estética integral bien guiada.</p>
+        <a class="btn sm" data-wa="Hola Helen, deseo lograr piel luminosa, firmeza y bienestar. ¿Qué me recomiendas?" href="#">Quiero esos resultados</a>
+      </article>
+      <!-- A: ACCIÓN -->
+      <article class="paso bloque-accion rev">
+        <div class="letra">A</div><h3>Acción</h3>
+        <p>Agenda tu valoración por WhatsApp. Los espacios son limitados porque cada clienta recibe atención personalizada y tiempo real con Helen. Reserva el tuyo hoy.</p>
+        <a class="btn" data-wa="Hola Helen, quiero reservar mi valoración y cita en Abundia. ¿Qué horarios tienes?" href="#">Reservar mi valoración ahora</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERÍA DE 8 TRATAMIENTOS ===== -->
+<section class="bg-marfil" id="tratamientos">
+  <div class="wrap">
+    <div class="centro rev">
+      <h2>Tratamientos pensados para ti</h2>
+      <p class="sub">Elige el que más te llame o deja que Helen diseñe tu protocolo tras el diagnóstico.</p>
+    </div>
+    <div class="grid-trat" id="grid-trat"></div>
+  </div>
+</section>
+
+<!-- ===== 12 TESTIMONIOS ===== -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="centro rev">
+      <h2>Lo que cuentan nuestras clientas</h2>
+      <p class="sub">Experiencias reales de cuidado, resultados y confianza.</p>
+    </div>
+    <div class="grid-test" id="grid-test"></div>
+    <div class="centro rev" style="margin-top:44px">
+      <a class="btn" data-wa="Hola Helen, leí los testimonios y quiero vivir mi propia experiencia en Abundia." href="#">Quiero mi experiencia Abundia</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CIERRE ===== -->
+<section class="cierre" id="contacto">
+  <div class="wrap">
+    <div class="cierre-caja rev">
+      <div>
+        <h2>Tu valoración personalizada empieza con un mensaje</h2>
+        <ul class="confianza">
+          <li>Diagnóstico personalizado antes de cualquier tratamiento</li>
+          <li>Atención directa y cercana con Helen Alfaro</li>
+          <li>Plan facial, corporal y de bienestar a tu medida</li>
+        </ul>
+        <a class="btn" data-wa="Hola Helen, quiero agendar mi cita en Abundia Estética Integral." href="#">Agendar por WhatsApp</a>
+      </div>
+      <div class="datos">
+        <div><b>WhatsApp</b><a href="tel:+522229200516">+52 222 920 0516</a></div>
+        <!-- EDITA: ubicación -->
+        <div><b>Ubicación</b>[Escribe aquí la dirección de Abundia]</div>
+        <!-- EDITA: horarios -->
+        <div><b>Horarios</b>[Escribe aquí tus días y horarios de atención]</div>
+        <p style="font-size:.9rem">Atención personalizada con Helen Alfaro, previa cita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="anio"></span> Abundia Estética Integral by Helen Alfaro. Todos los derechos reservados.</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="flotante" data-wa="Hola, quiero información sobre Abundia Estética Integral." href="#" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<script>
+/* ===== CONFIGURACIÓN ===== */
+const WA_NUMERO = "522229200516";
+const wa = t => `https://wa.me/${WA_NUMERO}?text=${encodeURIComponent(t)}`;
+
+/* ===== FOTOS DE TRATAMIENTOS: pega tus enlaces aquí (SLOT_FOTO_1 a SLOT_FOTO_8) ===== */
+const URL_FOTO_TRATAMIENTO_1 = "";  // SLOT_FOTO_1
+const URL_FOTO_TRATAMIENTO_2 = "";  // SLOT_FOTO_2
+const URL_FOTO_TRATAMIENTO_3 = "";  // SLOT_FOTO_3
+const URL_FOTO_TRATAMIENTO_4 = "";  // SLOT_FOTO_4
+const URL_FOTO_TRATAMIENTO_5 = "";  // SLOT_FOTO_5
+const URL_FOTO_TRATAMIENTO_6 = "";  // SLOT_FOTO_6
+const URL_FOTO_TRATAMIENTO_7 = "";  // SLOT_FOTO_7
+const URL_FOTO_TRATAMIENTO_8 = "";  // SLOT_FOTO_8
+
+const tratamientos = [
+ {foto:URL_FOTO_TRATAMIENTO_1,cat:"Facial",n:"Limpieza facial profunda y restauración cutánea",d:"Elimina impurezas, devuelve luminosidad y equilibra tu piel desde la primera sesión."},
+ {foto:URL_FOTO_TRATAMIENTO_2,cat:"Antienvejecimiento",n:"Terapia antienvejecimiento y rejuvenecimiento",d:"Mejora firmeza, textura y tono con un protocolo adaptado a tu tipo de piel."},
+ {foto:URL_FOTO_TRATAMIENTO_3,cat:"Corporal",n:"Experiencia corporal y aparatología",d:"Paquetes de varias sesiones para reafirmar y definir tu contorno corporal."},
+ {foto:URL_FOTO_TRATAMIENTO_4,cat:"Bienestar",n:"Presoterapia y drenaje",d:"Siente piernas más ligeras, menos retención y una sensación de descanso profundo."},
+ {foto:URL_FOTO_TRATAMIENTO_5,cat:"Relajación",n:"Masaje descontracturante de espalda y cuello",d:"Libera la tensión acumulada y recupera movilidad y calma."},
+ {foto:URL_FOTO_TRATAMIENTO_6,cat:"Bienestar digestivo",n:"Hidroterapia de colon",d:"Apoya tu bienestar digestivo y la sensación de ligereza interna."},
+ {foto:URL_FOTO_TRATAMIENTO_7,cat:"Uñas",n:"Cuidado y estética de uñas",d:"Manos y pies cuidados, con acabados elegantes y duraderos."},
+ {foto:URL_FOTO_TRATAMIENTO_8,cat:"Personalizado",n:"Protocolo integral personalizado",d:"Helen combina facial, corporal y bienestar en un plan único para tus metas."}
+];
+
+/* ===== TESTIMONIOS (textos de ejemplo: reemplázalos por los de tus clientas reales) ===== */
+const testimonios = [
+ ["Mariana R.","Limpieza facial profunda","Mi piel se ve limpia, uniforme y con una luz que no tenía hace años. Helen explicó cada paso."],
+ ["Lucía G.","Terapia antienvejecimiento","Notó mi piel más firme desde la tercera sesión. El diagnóstico hizo toda la diferencia."],
+ ["Andrea P.","Paquete corporal de varias sesiones","Mi ropa me queda distinto y me siento más ligera. Siempre me acompañaron con mucha calidez."],
+ ["Carolina M.","Hidroterapia de colon","Me sentí más ligera y con mejor digestión. Todo fue profesional, cómodo y muy respetuoso."],
+ ["Fernanda S.","Estética de uñas","Mis uñas lucen impecables semanas después. El cuidado en los detalles es increíble."],
+ ["Paola V.","Protocolo integral","Por fin un plan completo para mi piel y mi cuerpo, no tratamientos sueltos. Me sentí escuchada."],
+ ["Gabriela T.","Rejuvenecimiento facial","Mi rostro se ve descansado y natural. Justo el resultado que buscaba, sin exageraciones."],
+ ["Daniela C.","Presoterapia y drenaje","Salgo de cada sesión con las piernas livianas y la mente en calma. Ya es mi ritual."],
+ ["Verónica L.","Masaje descontracturante","Llegué con la espalda hecha nudo y salí renovada. Volví a dormir mejor."],
+ ["Sofía H.","Restauración cutánea","Mi piel está más hidratada y con menos manchas. Me explicaron cómo cuidarla en casa."],
+ ["Isabel N.","Experiencia corporal con aparatología","Resultados visibles y un trato cercano. Se nota que Helen cuida a cada clienta."],
+ ["Mónica A.","Atención integral","Desde la valoración hasta el seguimiento, todo fue personalizado. La recomiendo por completo."]
+];
+
+/* ===== RENDER ===== */
+document.getElementById("grid-trat").innerHTML = tratamientos.map(t => `
+ <article class="trat rev">
+  <div class="foto">${t.foto ? `<img src="${t.foto}" alt="${t.n}" loading="lazy">` : ""}</div>
+  <div class="cuerpo">
+   <span class="etiqueta">${t.cat}</span>
+   <h3>${t.n}</h3><p>${t.d}</p>
+   <a class="btn sm" data-wa="Hola Helen, quiero agendar: ${t.n}." href="#">Agendar este tratamiento por WhatsApp</a>
+  </div>
+ </article>`).join("");
+
+document.getElementById("grid-test").innerHTML = testimonios.map(([n,s,q]) => `
+ <article class="test rev">
+  <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+  <blockquote>“${q}”</blockquote>
+  <div class="quien">${n}<span>${s}</span></div>
+  <a data-wa="Hola Helen, quiero agendar ${s.toLowerCase()} como ${n}." href="#">Quiero este servicio</a>
+ </article>`).join("");
+
+/* Enlaces de WhatsApp contextuales */
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = wa(a.dataset.wa); a.target = "_blank"; a.rel = "noopener";
+});
+document.getElementById("anio").textContent = new Date().getFullYear();
+
+/* Animaciones al hacer scroll */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
